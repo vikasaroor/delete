@@ -1,4 +1,4 @@
-def call(a,b){
-  return  a+b
-  
+ def call(a,b){
+    def sum = a+b
+    retrun sum
 }
