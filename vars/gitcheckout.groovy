@@ -3,19 +3,19 @@ def call(Map mychk_config) {
 
    checkout([
                     $class: 'GitSCM',
-                    branches: [[name: ]],
+                    branches: [[name: mychk_config.branch ]],
                     doGenerateSubmoduleConfigurations: false,
                     extensions: [],
                     userRemoteConfigs: [[
-                        url: gitcred.myurl,
-                        credentialsId: gitcred.credentials
+                        url: mychk_config.myurl,
+                        credentialsId: mychk_config.credentials
                     ]]
                 ])
 
 }
 
-def mychk_config = { 
-    branch: 'main' , 
-    giturl: 'https://github.com/vikasaroor/delete.git' ,
-    gitcred: '' 
-}
+// def mychk_config = { 
+//     branch: 'main' , 
+//     giturl: 'https://github.com/vikasaroor/delete.git' ,
+//     gitcred: '' 
+// }
