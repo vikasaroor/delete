@@ -1,6 +1,6 @@
 @Library('my-sharedlib') _ 
 
-pipelIne { 
+pipeline { 
     
     agent any 
 
