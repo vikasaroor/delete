@@ -13,9 +13,9 @@ stage('checkout') {
           credentials = 'github-my'
           myurl = 'https://github.com/vikasaroor/delete.git'
          }
-        }
-        gitcheckout(gitcred)
         
+        gitcheckout(gitcred)
+        }
     }
 
 }
