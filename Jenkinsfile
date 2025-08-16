@@ -1,24 +1,25 @@
-@Library('my_checkout') _
+@Library('my-sharedlib') _ 
 
-pipeline {
+pipelIne { 
+    
+    agent any 
 
-agent any
-stages{
 
-stage('checkout') {
-    steps{
-        script {
-        def gitcred = [
-          branch: 'main',
-          credentials: 'github-credn',
-          myurl: 'https://github.com/vikasaroor/delete.git'
-        ]
-        
-        gitcheckout(gitcred)
+    stages{ 
+        stage('checkout'){ 
+            steps{ 
+              def mychk_config = { 
+                  branch: 'main' , 
+                  giturl: 'https://github.com/vikasaroor/delete.git' ,
+                  gitcred: 'github-cred' 
+                }
+                gitcheckout(my_config)
+
+            }
+
+
         }
     }
 
-}
 
-}
 }
