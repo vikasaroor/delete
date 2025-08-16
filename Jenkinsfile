@@ -10,7 +10,7 @@ stage('checkout') {
         script {
         def gitcred = {
           branch = 'main'
-          credentials = 'github-my'
+          credentials = 'github-credn'
           myurl = 'https://github.com/vikasaroor/delete.git'
          }
         
