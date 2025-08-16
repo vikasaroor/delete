@@ -1,7 +1,10 @@
 def call(Map gitcred) {
-    checkout scmGit(branches: [[name: '*/gitcred.branch']], 
+
+    echo "URL is  {gitcred.myurl}"
+    echo "branch is  {gitcred.branch}"
+    checkout scmGit(branches: [[name: gitcred.branch]], 
     extensions: [], 
-    userRemoteConfigs: [[credentialsId: 'gitcred.credentials', url: 'gitcred.myurl']])
+    userRemoteConfigs: [[credentialsId: gitcred.credentials, url: gitcred.myurl]])
 
 }
 // def gitcred {
