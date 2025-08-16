@@ -8,6 +8,7 @@ pipelIne {
     stages{ 
         stage('checkout'){ 
             steps{ 
+                script{
               def mychk_config = [ 
                   branch: 'main', 
                   giturl: 'https://github.com/vikasaroor/delete.git' ,
@@ -15,6 +16,7 @@ pipelIne {
               ]
                 gitcheckout(mychk_config)
 
+            }
             }
 
 
