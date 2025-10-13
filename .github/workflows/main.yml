@@ -1,5 +1,7 @@
 name: test 
-on: workflow_call 
+on: 
+  workflow_call:
+  workflow_dispatch:
 run-name: testing
 jobs:
  first:
