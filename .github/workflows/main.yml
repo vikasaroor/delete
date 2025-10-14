@@ -1,13 +1,11 @@
-name: test 
+name: tsting_actions 
+run-name: my-first-actions
+
 on: 
-  workflow_call:
   workflow_dispatch:
-run-name: testing
-jobs:
- first:
-   runs-on: ubuntu-latest
-   steps: 
-   - name: comamndcheck
-     run: |
-      echo "hello my first"
- 
+
+jobs: 
+    first-test: 
+      runs-on: ubuntu:latest 
+      steps: 
+       - run: echo "my first"
